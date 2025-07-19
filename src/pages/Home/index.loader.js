@@ -13,46 +13,41 @@ export const loader = async () => {
   });
 };
 
+// ---- Weather (Open-Meteo API - No Key Required) ----
 const fetchWeather = async () => {
   let response = await fetch(
-    `http://api.weatherapi.com/v1/current.json?q=new-york&key=${
-      import.meta.env.VITE_WEATHER_API_KEY
-    }`
+    `https://api.open-meteo.com/v1/forecast?latitude=40.7&longitude=-74.0&current_weather=true`
   );
 
-  //just to show loading skeleton
-  await new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
+  await new Promise((resolve) => setTimeout(resolve, 1000)); // Loading delay for skeleton
 
   if (!response.ok) {
     throw new Error("Could not fetch weather");
   }
 
   let data = await response.json();
-  return data;
+  return data.current_weather;
 };
 
+// ---- News (SpaceFlightNews API - No Key Required) ----
 const fetchNews = async () => {
-  let response = await fetch(
-    `https://newsapi.org/v2/top-headlines?q=cat&apiKey=${
-      import.meta.env.VITE_NEWS_API_KEY
-    }`
-  );
+  try {
+    let response = await fetch(
+      "https://api.spaceflightnewsapi.net/v4/articles/?limit=10"
+    );
 
-  //just to show loading skeleton
-  await new Promise((resolve) => {
-    setTimeout(resolve, 1000);
-  });
+    if (!response.ok) throw new Error("Could not fetch news");
 
-  if (response.status == 429) {
-    throw new Error("Too many requests");
+    let data = await response.json();
+    return data.results.map((article) => ({
+      title: article.title,
+      url: article.url,
+      image_url: article.image_url,
+      summary: article.summary,
+      published_at: article.published_at,
+    }));
+  } catch (error) {
+    console.error("News fetch failed:", error);
+    return [];
   }
-
-  if (!response.ok) {
-    throw new Error("Could not fetch news");
-  }
-
-  let data = await response.json();
-  return data.articles;
 };
