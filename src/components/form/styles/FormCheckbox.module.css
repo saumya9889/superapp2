@@ -1,0 +1,10 @@
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 1rem;
+}

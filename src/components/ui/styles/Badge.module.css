@@ -1,0 +1,54 @@
+.badge {
+  outline: none;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  width: 100%;
+  white-space: normal;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.withIcon {
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: default;
+}
+
+.primary {
+  background-color: var(--primary);
+}
+
+.secondary {
+  background-color: var(--secondary);
+}
+
+.soft {
+  background-color: #ffffff7a;
+  cursor: default;
+}
+
+.icon {
+  display: flex;
+  transform: translateY(-1px);
+  cursor: pointer;
+  color: var(--neutral-focus);
+}
+
+.sizeOne {
+  font-size: 12px;
+  letter-spacing: 0.0025em;
+  line-height: 16px;
+}
+
+.sizeTwo {
+  font-size: 14px;
+  letter-spacing: 0em;
+  line-height: 20px;
+}

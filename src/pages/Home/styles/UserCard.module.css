@@ -1,0 +1,28 @@
+.container {
+  flex: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  gap: 2rem;
+  background: rgb(96, 33, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(96, 33, 255, 1) 47%,
+    rgba(241, 212, 252, 1) 100%
+  );
+}
+
+.banner {
+  overflow: hidden;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

@@ -1,0 +1,18 @@
+.timer {
+  height: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  background-color: #181d37;
+  padding: 1rem;
+  box-shadow: 3px 3px 6px 0px #19131e inset,
+    -3px -3px 6px 1px rgba(23, 22, 22, 0.5) inset;
+  border-radius: 8rem;
+  position: relative;
+}
+
+.time {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,22 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.checkbox {
+  display: flex;
+  gap: 1rem;
+}

@@ -1,0 +1,25 @@
+.container {
+  height: 100%;
+  flex: 1;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgb(20, 20, 20);
+}
+
+.image {
+  height: 55%;
+  composes: pulseElem from global;
+}
+
+.textContainer {
+  padding: 1rem;
+}
+
+.text {
+  margin-bottom: 1rem;
+  height: 20px;
+  border-radius: 10px;
+  composes: pulseElem from global;
+}

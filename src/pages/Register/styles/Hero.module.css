@@ -1,0 +1,17 @@
+.hero {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.heroContent {
+  padding: 5%;
+  position: absolute;
+  bottom: 0;
+}

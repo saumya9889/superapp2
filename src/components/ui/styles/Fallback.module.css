@@ -1,0 +1,8 @@
+.error {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px solid var(--error);
+  background-color: rgba(255, 0, 0, 0.114);
+  padding: 1rem;
+}

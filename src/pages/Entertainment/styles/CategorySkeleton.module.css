@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.imageLoader {
+  aspect-ratio: 16/9;
+  border-radius: 0.5rem;
+  background-color: var(--neutral-focus);
+  composes: pulseElem from global;
+}
+

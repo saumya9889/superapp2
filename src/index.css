@@ -1,0 +1,70 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --primary-text: rgba(255, 255, 255, 0.87);
+  --dark-text: rgba(0, 0, 0, 0.95);
+  
+  --primary: #72db73;
+  --primary-focus: #6cf36e;
+  --secondary: #148a08;
+  --secondary-focus: #18a009;
+  --neutral: #7c7c7c;
+  --neutral-focus: #393939;
+  --error: #ff7373;
+  --error-focus: #ff8585;
+
+  color-scheme: light dark;
+  color: var(--primary-text);
+  background-color: #000000eb;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+* {
+  scrollbar-width: 10px;
+  scrollbar-color: #00000022 #ffffff00;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffffff22;
+  border-radius: 10px;
+}
+
+.pulseElem {
+  animation: pulse 1s ease infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    background-color: rgb(40, 40, 40);
+  }
+  to {
+    background-color: rgb(71, 71, 71);
+  }
+}

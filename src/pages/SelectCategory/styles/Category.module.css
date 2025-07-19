@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+  cursor: pointer;
+  justify-content: space-between;
+  border: 4px solid transparent;
+
+}
+
+.image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.isSelected {
+  border: 4px solid #148A08;
+}

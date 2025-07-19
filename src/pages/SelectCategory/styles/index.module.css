@@ -1,0 +1,32 @@
+.container {
+  padding: 0.5rem 5%;
+  height: 100vh;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  height: 90vh;
+  padding-top: 5vh;
+}
+
+.leftGroup {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 680px;
+  gap: 1rem;
+  max-height: 80vh;
+}
+
+.nextButton {
+  float: right;
+  margin: 0.5rem 0;
+}
